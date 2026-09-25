@@ -1,0 +1,17 @@
+{
+  "config": {
+    "c_fp": 1.0,
+    "c_fn": 5.0,
+    "lgd": 0.6
+  },
+  "theoretical_threshold": 0.1667,
+  "chosen_threshold": 0.13,
+  "portfolio_kpis": {
+    "applicants": 200,
+    "approval_rate": 0.34,
+    "high_risk_share": 0.33,
+    "expected_loss_approved_book": 7194.29,
+    "expected_loss_if_approve_all": 167230.64,
+    "realised_loss_approved_book": 5935.2
+  }
+}
