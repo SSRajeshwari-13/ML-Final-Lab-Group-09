@@ -197,12 +197,28 @@ predictions = model.predict(transformed_data_df)
 probabilities = model.predict_proba(transformed_data_df)
 
 end_time = time.perf_counter()
+inference_end_timestamp = datetime.now()
+
 latency = end_time - start_time
 
-logger.info("Prediction completed successfully.")
-logger.info("Inference latency: %.3f ms", latency * 1000)
+logger.info(
+    "Inference completed: %s",
+    inference_end_timestamp.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+)
 
-print(f"\nInference latency: {latency * 1000:.3f} ms")
+logger.info("Prediction completed successfully.")
+
+logger.info(
+    "Inference latency: %.3f ms",
+    latency * 1000
+)
+
+print(
+    f"\nInference completed: "
+    f"{inference_end_timestamp.strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]}"
+)
+
+print(f"Inference latency: {latency * 1000:.3f} ms")
 
 print("\nPredicted classes:")
 print(predictions)
